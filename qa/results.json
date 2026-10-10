@@ -1,0 +1,29 @@
+[
+  {
+    "name": "desktop",
+    "status": 200,
+    "overflow": false,
+    "logoLoaded": true,
+    "sidebarVisible": true,
+    "cards": 3,
+    "errors": []
+  },
+  {
+    "name": "laptop",
+    "status": 200,
+    "overflow": false,
+    "logoLoaded": true,
+    "sidebarVisible": true,
+    "cards": 3,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "status": 200,
+    "overflow": false,
+    "logoLoaded": true,
+    "sidebarVisible": false,
+    "cards": 3,
+    "errors": []
+  }
+]
