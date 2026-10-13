@@ -15,13 +15,11 @@ ChatGPT and Claude helped translate my vision into Razorpay's ecosystem and chal
 
 ## 2. AI tools and models used
 
-| Tool | Use in this project | Model disclosure |
+| Tool - Model disclosure | Use in this project |
 | --- | --- | --- |
-| ChatGPT | Business-model exploration, merchant jobs to be done, brainstorming, CIRCLES draft, literature mapping, cross-review, product-note and walkthrough refinement | The supplied research chats do not reliably identify the exact model/version. No specific version is claimed. |
-| Claude | Landscape research, alternative comparison, source checking, experiment-design critique, Advantage+ analogy review, control and audit-framework exploration | The supplied Claude log does not identify the exact model/version. No specific version is claimed. |
-| OpenAI Codex | Repository inspection, prototype implementation and redesign, debugging, wireframe creation, state/build/browser checks, and publication assistance | The historical implementation records supplied for this log do not reliably identify the exact model/version. Codex is the tool name, not an asserted model identifier. |
-
-Exact model versions were not consistently recorded during the build. This is a documentation limitation rather than an assumption that all sessions used the same model.
+| ChatGPT - GPT 5.6 (Medium effort), Sol 6.1 (Medium effort) | Business-model exploration, merchant jobs to be done, brainstorming, CIRCLES draft, literature mapping, cross-review, product-note and walkthrough refinement |
+| Claude - Sonnet 5.5 (Medium effort)  | Landscape research, alternative comparison, source checking, experiment-design critique, Advantage+ analogy review, control and audit-framework exploration |
+| OpenAI Codex - Sol 6.1 (High effort), GPT 6 Astra (High effort) | Repository inspection, prototype implementation and redesign, debugging, wireframe creation, state/build/browser checks, and publication assistance |
 
 ## 3. Key prompts, workflows, and agent setup
 
