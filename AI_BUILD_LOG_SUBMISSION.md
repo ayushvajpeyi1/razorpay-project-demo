@@ -16,7 +16,7 @@ ChatGPT and Claude helped translate my vision into Razorpay's ecosystem and chal
 ## 2. AI tools and models used
 
 | Tool - Model disclosure | Use in this project |
-| --- | --- | --- |
+| --- | --- |
 | ChatGPT - GPT 5.6 (Medium effort), Sol 6.1 (Medium effort) | Business-model exploration, merchant jobs to be done, brainstorming, CIRCLES draft, literature mapping, cross-review, product-note and walkthrough refinement |
 | Claude - Sonnet 5.5 (Medium effort)  | Landscape research, alternative comparison, source checking, experiment-design critique, Advantage+ analogy review, control and audit-framework exploration |
 | OpenAI Codex - Sol 6.1 (High effort), GPT 6 Astra (High effort) | Repository inspection, prototype implementation and redesign, debugging, wireframe creation, state/build/browser checks, and publication assistance |
