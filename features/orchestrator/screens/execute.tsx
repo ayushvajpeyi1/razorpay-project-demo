@@ -1,0 +1,23 @@
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { demoModel, monitoring, rupees, scenarioFor } from '../data';
+import { rolloutBlock, currentResult } from '../state';
+import { Badge, Button, Card, Details, Heading, type ScreenProps } from '../shared';
+export function ExecuteScreen({ state, dispatch }: ScreenProps) {
+  const active = state.status === 'running' && state.roadmapApproved && !rolloutBlock(state);
+  const reverted = state.status === 'reverted';
+  const result = currentResult({ ...state, underperformance: reverted || state.underperformance });
+  const showMetrics = state.roadmapApproved || ['paused', 'reverted', 'revoked'].includes(state.status);
+  const avoided = Math.round(monitoring.contactsAvoided * result.coverage);
+  const recovery = Math.round((result.independent.net + (reverted || state.underperformance ? result.increment : state.approvedExtra)) / Math.max(1, demoModel.eligibleCustomers * result.coverage));
+  return <><Heading eyebrow="06 / MONITOR" title={reverted ? 'Recovery dropped. We switched back.' : active ? 'Your recovery plan is on.' : state.status === 'paused' ? 'Your recovery plan is paused.' : 'Ready when you are.'}>Demo monitoring. You can stop coordination at any time.</Heading>
+    {reverted && <div className="ro-callout ro-danger" role="alert"><strong>Auto-reverted to independent agents.</strong><p>{rupees(result.coordinated.net)} with coordination vs {rupees(result.independent.net)} without it. Merchant alert logged for this demo.</p></div>}
+    {state.underperformance && !reverted && <div className="ro-callout ro-alert">Losing example selected. Coordination stays off.</div>}
+    {!state.roadmapApproved && !reverted && !state.underperformance && <div className="ro-notice">{state.status === 'revoked' ? 'Permissions revoked. Review your rules to restart.' : 'Approve the plan before turning coordination on.'}</div>}
+    <Card className="ro-diagnosis"><div className="ro-card-title"><ShieldCheck /><h3>Recovery at a glance</h3><Badge tone={active ? 'green' : reverted ? 'red' : 'amber'}>{active ? 'On · demo' : reverted ? 'Rolled back' : state.status === 'idle' ? 'Off' : state.status}</Badge></div><div className="ro-stats"><div><span className="ro-stat-label">Duplicate calls avoided</span><strong>{showMetrics ? avoided : '—'}</strong></div><div><span className="ro-stat-label">Net recovery / eligible customer</span><strong>{showMetrics ? rupees(recovery) : '—'}</strong></div><div><span className="ro-stat-label">Your overrides</span><strong>{showMetrics ? monitoring.overrides : '—'}</strong></div></div></Card>
+    <div className="ro-guardrails"><Card><span className="ro-stat-label">Complaints</span><strong>{showMetrics ? `${monitoring.complaints}%` : '—'}</strong><small>Your stop limit: {state.framework.complaintLimit}%</small></Card><Card><span className="ro-stat-label">Opt-outs</span><strong>{showMetrics ? `${monitoring.optOuts}%` : '—'}</strong><small>Your stop limit: {state.framework.optOutLimit}%</small></Card><Card><span className="ro-stat-label">Monthly spending limit</span><strong>{rupees(state.framework.spend)}</strong></Card></div>
+    <div className="ro-actions"><span>No real calls or alerts are sent.</span><div>{!active && <Button secondary onClick={() => dispatch({ type: 'step', step: state.frameworkApproved ? 4 : 2 })}>Review plan</Button>}<Button secondary disabled={!active} onClick={() => dispatch({ type: 'pause' })}>Pause</Button><Button secondary disabled={!state.frameworkApproved && !state.roadmapApproved} onClick={() => dispatch({ type: 'revoke' })}>Revoke permissions</Button><Button secondary onClick={() => dispatch({ type: 'retest' })}>Edit customers</Button></div></div>
+    {state.approvedActions.length > 0 && <Details title={`${state.roadmapApproved ? 'Approved plan' : 'Last approved plan'} · ${state.approvedActions.length} actions · +${rupees(state.approvedExtra)} / month`}><ul className="ro-event-log">{state.approvedActions.map(row => <li key={row.id}><strong>{row.description}</strong> · +{rupees(row.extra)} / month · {row.rollout}% starting rollout</li>)}</ul></Details>}
+    <Details title={`Activity log · ${state.audit.length} events`}><ol className="ro-event-log">{state.audit.slice(0, 4).map(entry => <li key={entry}>{entry}</li>)}</ol><small>Fictional snapshots respond to the scenario and selected cohorts; they do not accumulate real transactions.</small></Details>
+    <div className="ro-actions"><span>Keep what works. Retest when things change.</span><Button onClick={() => dispatch({ type: 'step', step: 6 })}>See what we learned <ArrowRight /></Button></div>
+  </>;
+}

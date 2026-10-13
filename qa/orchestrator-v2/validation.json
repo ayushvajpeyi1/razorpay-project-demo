@@ -1,0 +1,22 @@
+{
+  "productionBuild": "passed",
+  "typecheck": "passed",
+  "originalStateTests": "passed",
+  "v2StateTests": "passed",
+  "originalRoute": "verified available",
+  "browserChecks": [
+    "contextual customer decision",
+    "goal does not change forecast",
+    "five-arm checkpoint experiment",
+    "plan approval",
+    "pause and resume",
+    "customer execution trace",
+    "predicted vs observed lift",
+    "selective sale-cohort test and approval",
+    "low traffic hides lift and retains samples in extension",
+    "losing combination blocks rollout",
+    "cart outage permits unaffected renewal trace",
+    "runtime loss auto-reverts"
+  ],
+  "consoleErrors": []
+}

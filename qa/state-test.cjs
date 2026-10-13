@@ -1,0 +1,37 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const ts = require('typescript');
+require.extensions['.ts'] = (module, filename) => module._compile(ts.transpileModule(fs.readFileSync(filename, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, filename);
+const { initialState, reducer, rolloutBlock, currentResult, selectedPlan, validGoal, validFramework } = require('../features/orchestrator/state.ts');
+const { planActions, planAmounts } = require('../features/orchestrator/data.ts');
+const fresh = () => structuredClone(initialState);
+const apply = (s, type, rest = {}) => reducer(s, { type, ...rest });
+const tested = (s = fresh()) => apply(apply(s, 'approveFramework'), 'experimentComplete');
+const approved = () => apply(tested(), 'approveRoadmap');
+assert.equal(currentResult(fresh()).increment, 60000);
+for (const goal of [1, 1000, 50000, 75000, 1000000]) {
+ const s = apply(fresh(), 'goal', { goal: { ...initialState.goal, amount: goal } });
+ assert.ok(currentResult(s).increment > goal); assert.equal(selectedPlan(s).extra, currentResult(s).increment);
+ assert.equal(planAmounts(currentResult(s).increment).reduce((a,b)=>a+b,0),currentResult(s).increment);
+}
+let s = apply(fresh(), 'step', { step: 5 }); assert.equal(s.status, 'idle'); assert.equal(apply(s, 'approveRoadmap').status, 'idle');
+s = apply(fresh(), 'scenario', { value: '19k-example' }); assert.equal(s.goal.amount,15000); assert.equal(currentResult(s).increment,19000);
+s = tested(s); assert.deepEqual(planAmounts(currentResult(s).increment),[7000,6000,4000,2000]);
+s = apply(s,'goal',{goal:{...s.goal,amount:50000}}); assert.equal(selectedPlan(s).extra,19000); assert.equal(s.stale,false); assert.equal(50000-selectedPlan(s).extra,31000);
+s = apply(s,'selectAction',{id:'suppress',checked:false}); assert.equal(selectedPlan(s).extra,17000);
+s = apply(s,'approveRoadmap'); assert.equal(s.status,'running'); assert.equal(s.approvedExtra,17000); assert.equal(s.approvedActions.length,3); assert.ok(s.approvedActions.every(row=>row.id!=='suppress')); assert.equal(s.approvedActions.find(row=>row.id==='delay').rollout,10);
+s = apply(s,'pause'); assert.equal(s.status,'paused'); s = apply(s,'revoke'); assert.equal(s.frameworkApproved,false);
+s = apply(approved(),'underperformance',{value:true}); assert.equal(s.status,'reverted'); assert.equal(currentResult(s).increment,-12000); assert.equal(s.roadmapApproved,false);
+s = apply(s,'underperformance',{value:false}); assert.equal(s.status,'reverted'); assert.equal(s.roadmapApproved,false);
+s = apply(approved(),'lowTraffic',{value:true}); assert.equal(s.status,'paused'); assert.match(rolloutBlock(s),/Not enough data/);
+s = apply(s,'lowTraffic',{value:false}); assert.equal(s.roadmapApproved,false);
+s = apply(approved(),'goal',{goal:{...initialState.goal,amount:100000}}); assert.equal(currentResult(s).increment,120000); assert.equal(s.stale,true); s = apply(apply(s,'runExperiment'),'experimentComplete'); assert.equal(s.stale,false); assert.equal(apply(s,'approveRoadmap').status,'running');
+s = apply(tested(),'runExperiment'); s = apply(s,'framework',{framework:{...s.framework,exposure:30}}); s = apply(s,'experimentComplete'); assert.equal(s.stale,true); assert.equal(s.frameworkApproved,false);
+s = tested(); for(const row of planActions)s=apply(s,'selectAction',{id:row.id,checked:false}); assert.equal(selectedPlan(s).extra,0); assert.match(rolloutBlock(s),/Select at least one/);
+s = approved(); const before=s.roadmapApproved; s=apply(s,'showEvent',{index:1}); assert.equal(s.roadmapApproved,before); s=apply(s,'dismissEvent');assert.equal(s.eventIndex,null);assert.equal(s.status,'running');s=apply(s,'showEvent',{index:2});s=apply(s,'reviewEvent');assert.equal(s.status,'paused');assert.equal(s.step,2);assert.equal(s.frameworkApproved,false);
+s = apply(approved(),'resetDemo'); assert.equal(s.scenario,'goal-beating');assert.equal(s.frameworkApproved,false);assert.equal(s.selectedActions.length,4);
+s = apply(fresh(),'policyDraft',{value:'Prefer renewals'});s=apply(s,'savePolicy');assert.equal(s.policy,'Prefer renewals');assert.equal(s.frameworkApproved,false);
+assert.equal(validGoal({...initialState.goal,amount:-1}),false);assert.equal(validFramework({...initialState.framework,cart:false,subscription:false}),false);
+assert.equal(currentResult({...fresh(),framework:{...initialState.framework,subscribers:false}}).winner,false);
+assert.equal(selectedPlan({ ...fresh(), framework: { ...initialState.framework, exposure: 5 } }).rows.find(row=>row.id==='delay').rollout,5);
+console.log('PASS: goal-beating defaults, fixed 19k rows, selection totals, approval carryover, confidence rollout, retests, cancellation, low traffic, rollback, external-event control, reset and guards');

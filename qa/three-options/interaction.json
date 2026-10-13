@@ -1,0 +1,98 @@
+[
+  {
+    "name": "External-event popup is visible",
+    "pass": true
+  },
+  {
+    "name": "Event dismisses without changing permissions",
+    "pass": true
+  },
+  {
+    "name": "Retune opens merchant rules",
+    "pass": true
+  },
+  {
+    "name": "Exactly three option bars",
+    "pass": true
+  },
+  {
+    "name": "Exactly two customer examples",
+    "pass": true
+  },
+  {
+    "name": "Plan has one table",
+    "pass": true
+  },
+  {
+    "name": "Four rows default checked",
+    "pass": true
+  },
+  {
+    "name": "Default beats the goal",
+    "pass": true
+  },
+  {
+    "name": "Unchecking row recalculates headline",
+    "pass": true
+  },
+  {
+    "name": "Approved subset carries to monitoring",
+    "pass": true
+  },
+  {
+    "name": "Second winning example is fixed Rs 19k",
+    "pass": true
+  },
+  {
+    "name": "Second example uses lower goal",
+    "pass": true
+  },
+  {
+    "name": "Fixed example reproduces Rs 31k gap",
+    "pass": true
+  },
+  {
+    "name": "Fixed example shows -62% deviation",
+    "pass": true
+  },
+  {
+    "name": "Fixed rows recalculate to Rs 17k",
+    "pass": true
+  },
+  {
+    "name": "Gap options expand inline",
+    "pass": true
+  },
+  {
+    "name": "Low traffic removes all bars",
+    "pass": true
+  },
+  {
+    "name": "Low traffic extends test",
+    "pass": true
+  },
+  {
+    "name": "Random event appears automatically",
+    "pass": true
+  },
+  {
+    "name": "Desktop actions fit and remain unobstructed",
+    "pass": true
+  },
+  {
+    "name": "Responsive screens have no page overflow",
+    "pass": true
+  },
+  {
+    "name": "Entered goal generates 20% higher demo result",
+    "pass": true
+  },
+  {
+    "name": "Production comparison has exactly three bars",
+    "pass": true
+  },
+  {
+    "name": "Production selected-plan approval enabled",
+    "pass": true
+  }
+]

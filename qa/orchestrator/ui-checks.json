@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Navigation does not execute",
+    "pass": true
+  },
+  {
+    "name": "Roadmap requires framework",
+    "pass": true
+  },
+  {
+    "name": "Negative goal blocks analysis",
+    "pass": true
+  },
+  {
+    "name": "Analysis resolves to diagnosis",
+    "pass": true
+  },
+  {
+    "name": "Framework approval opens experiment",
+    "pass": true
+  },
+  {
+    "name": "Default roadmap can be approved",
+    "pass": true
+  },
+  {
+    "name": "Approval starts simulated monitoring",
+    "pass": true
+  },
+  {
+    "name": "Pause stops simulation",
+    "pass": true
+  },
+  {
+    "name": "Revoke clears permissions",
+    "pass": true
+  },
+  {
+    "name": "Underperformance displays auto-reversion",
+    "pass": true
+  },
+  {
+    "name": "Removing demo condition does not restart",
+    "pass": true
+  },
+  {
+    "name": "Low traffic removes point estimate",
+    "pass": true
+  },
+  {
+    "name": "Low traffic displays extension",
+    "pass": true
+  },
+  {
+    "name": "Inconclusive evidence blocks rollout",
+    "pass": true
+  },
+  {
+    "name": "Merchant policies save independently",
+    "pass": true
+  },
+  {
+    "name": "Retest returns to framework",
+    "pass": true
+  },
+  {
+    "name": "Retest needs new evidence",
+    "pass": true
+  },
+  {
+    "name": "Reject keeps independent agents",
+    "pass": true
+  },
+  {
+    "name": "Edited setup cannot approve fixed results",
+    "pass": true
+  },
+  {
+    "name": "Arrow right changes screen",
+    "pass": true
+  },
+  {
+    "name": "Arrow left changes screen",
+    "pass": true
+  },
+  {
+    "name": "Arrow keys ignored in fields",
+    "pass": true
+  },
+  {
+    "name": "Edited target updates remaining gap",
+    "pass": true
+  },
+  {
+    "name": "Refresh resets visit",
+    "pass": true
+  },
+  {
+    "name": "Transactions regression: three cards and no overflow",
+    "pass": true
+  },
+  {
+    "name": "Failed-card entry opens feature",
+    "pass": true
+  },
+  {
+    "name": "Mobile screens have no horizontal overflow",
+    "pass": true
+  },
+  {
+    "name": "Mobile demo bar avoids Help",
+    "pass": true
+  },
+  {
+    "name": "TEST toolbar removed",
+    "pass": true
+  },
+  {
+    "name": "All desktop screens fit the recording frame",
+    "pass": true
+  },
+  {
+    "name": "Diagnosis preserves goal summary",
+    "pass": true
+  },
+  {
+    "name": "Edit goal returns to form",
+    "pass": true
+  },
+  {
+    "name": "Sidebar entry opens feature",
+    "pass": true
+  },
+  {
+    "name": "Updated Transactions regression passes",
+    "pass": true
+  },
+  {
+    "name": "Updated mobile feature checks pass",
+    "pass": true
+  },
+  {
+    "name": "Final production preview has no TEST toolbar",
+    "pass": true
+  }
+]

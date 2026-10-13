@@ -1,0 +1,58 @@
+[
+  {
+    "screen": 1,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 743.6015625
+  },
+  {
+    "screen": 2,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 593.6171875
+  },
+  {
+    "screen": 3,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 759.859375
+  },
+  {
+    "screen": 4,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 799.4921875
+  },
+  {
+    "screen": 5,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 763.2421875
+  },
+  {
+    "screen": 6,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 786.765625
+  },
+  {
+    "screen": 7,
+    "actionsObstructed": false,
+    "badges": 2,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 769.1171875
+  }
+]

@@ -1,0 +1,170 @@
+{
+  "desktop": [
+    {
+      "stage": "Discover",
+      "buttons": [
+        {
+          "bottom": 868.734375,
+          "disabled": false,
+          "text": "Inspect the proposed decision "
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "stage": "Decide",
+      "buttons": [
+        {
+          "bottom": 864.234375,
+          "disabled": false,
+          "text": "Design the controlled experiment "
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "stage": "Experiment",
+      "buttons": [
+        {
+          "bottom": 894.734375,
+          "disabled": false,
+          "text": "Review the evidence-backed plan "
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "stage": "Approve",
+      "buttons": [
+        {
+          "bottom": 801.734375,
+          "disabled": false,
+          "text": "Keep agents independent"
+        },
+        {
+          "bottom": 801.734375,
+          "disabled": true,
+          "text": "Strategy approved "
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "stage": "Execute",
+      "buttons": [
+        {
+          "bottom": 306.4375,
+          "disabled": false,
+          "text": "Pause"
+        },
+        {
+          "bottom": 306.4375,
+          "disabled": false,
+          "text": "Revoke"
+        },
+        {
+          "bottom": 667.234375,
+          "disabled": true,
+          "text": "Trace complete "
+        },
+        {
+          "bottom": 781.234375,
+          "disabled": false,
+          "text": "Inspect what the system learned "
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "stage": "Learn",
+      "buttons": [
+        {
+          "bottom": 1018.734375,
+          "disabled": true,
+          "text": "Save preference"
+        }
+      ],
+      "overflow": 0,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    }
+  ],
+  "mobile": [
+    {
+      "stage": "Discover",
+      "heading": "Two agents. One customer. A missed opportunity.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "stage": "Decide",
+      "heading": "The right action depends on the customer.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "stage": "Experiment",
+      "heading": "The combined strategy outperforms its parts.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "stage": "Approve",
+      "heading": "Approve what the evidence supports.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "stage": "Execute",
+      "heading": "A shared outcome changes the next action.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "stage": "Learn",
+      "heading": "Memory should improve the next decision.",
+      "overflow": 0,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  ]
+}

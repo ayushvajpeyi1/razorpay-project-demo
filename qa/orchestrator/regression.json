@@ -1,0 +1,86 @@
+{
+  "transactions": [
+    {
+      "name": "desktop",
+      "cards": 3,
+      "height": 1224,
+      "logoLoaded": true,
+      "overflow": false,
+      "sidebarVisible": true,
+      "toolbarRemoved": true,
+      "width": 2232,
+      "zeroValues": [
+        "₹0.00",
+        "₹0.00",
+        "0"
+      ]
+    },
+    {
+      "name": "laptop",
+      "cards": 3,
+      "height": 900,
+      "logoLoaded": true,
+      "overflow": false,
+      "sidebarVisible": true,
+      "toolbarRemoved": true,
+      "width": 1440,
+      "zeroValues": [
+        "₹0.00",
+        "₹0.00",
+        "0"
+      ]
+    },
+    {
+      "name": "mobile",
+      "cards": 3,
+      "height": 844,
+      "logoLoaded": true,
+      "overflow": false,
+      "sidebarVisible": false,
+      "toolbarRemoved": true,
+      "width": 390,
+      "zeroValues": [
+        "₹0.00",
+        "₹0.00",
+        "0"
+      ]
+    }
+  ],
+  "mobile": [
+    {
+      "screen": 1,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 2,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 3,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 4,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 5,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 6,
+      "barHelpOverlap": false,
+      "overflow": false
+    },
+    {
+      "screen": 7,
+      "barHelpOverlap": false,
+      "overflow": false
+    }
+  ]
+}

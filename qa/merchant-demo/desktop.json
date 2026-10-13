@@ -1,0 +1,58 @@
+[
+  {
+    "screen": 1,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 702.75,
+    "words": 89
+  },
+  {
+    "screen": 2,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 561.515625,
+    "words": 48
+  },
+  {
+    "screen": 3,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 701.8828125,
+    "words": 104
+  },
+  {
+    "screen": 4,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 786.9609375,
+    "words": 115
+  },
+  {
+    "screen": 5,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 690.015625,
+    "words": 97
+  },
+  {
+    "screen": 6,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 712.984375,
+    "words": 88
+  },
+  {
+    "screen": 7,
+    "actionsObstructed": false,
+    "barHelpOverlap": false,
+    "overflow": false,
+    "screenBottom": 705.78125,
+    "words": 103
+  }
+]

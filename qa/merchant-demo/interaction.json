@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Blocked roadmap has an active next action",
+    "pass": true
+  },
+  {
+    "name": "Normal scenario clearly wins",
+    "pass": true
+  },
+  {
+    "name": "Default roadmap approval is enabled",
+    "pass": true
+  },
+  {
+    "name": "Changing goal updates the gap",
+    "pass": true
+  },
+  {
+    "name": "Approval starts the demo",
+    "pass": true
+  },
+  {
+    "name": "Recovery drop rolls back execution",
+    "pass": true
+  },
+  {
+    "name": "Rollback updates numeric comparison",
+    "pass": true
+  },
+  {
+    "name": "Losing scenario is visible in experiment",
+    "pass": true
+  },
+  {
+    "name": "Customer edits change gain to Rs 8k",
+    "pass": true
+  },
+  {
+    "name": "Edited setup can be approved after retest",
+    "pass": true
+  },
+  {
+    "name": "Low traffic gives a recovery action",
+    "pass": true
+  },
+  {
+    "name": "Removing low traffic restores approval",
+    "pass": true
+  },
+  {
+    "name": "Reset does not silently approve",
+    "pass": true
+  },
+  {
+    "name": "All desktop action buttons unobstructed",
+    "pass": true
+  },
+  {
+    "name": "All mobile screens fit without horizontal overflow",
+    "pass": true
+  },
+  {
+    "name": "Production roadmap approval is enabled",
+    "pass": true
+  }
+]

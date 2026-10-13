@@ -1,0 +1,17 @@
+[
+  {
+    "screen": "1 Overview",
+    "overflow": false,
+    "tables": 0
+  },
+  {
+    "screen": "4 Test",
+    "overflow": false,
+    "tables": 0
+  },
+  {
+    "screen": "5 Your plan",
+    "overflow": false,
+    "tables": 1
+  }
+]

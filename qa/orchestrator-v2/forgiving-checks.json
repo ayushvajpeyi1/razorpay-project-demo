@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "Original-version header link stays removed",
+    "Learning history opens before a new test",
+    "Prior validated finding has date and sample size",
+    "Escape closes the learning dialog",
+    "Review includes merchant preferences",
+    "Accidental rejection exposes Undo",
+    "Rejecting does not revoke experiment authorization",
+    "Undo rejection restores review choices",
+    "Review preferences dialog opens",
+    "Edited preferences appear on review",
+    "Undo pause restores execution",
+    "Revocation stops execution",
+    "Undo revocation restores execution",
+    "Completed trace survives undo",
+    "Learning history lists all four tested findings",
+    "Learning history includes validated failures",
+    "Final review offers undo"
+  ],
+  "consoleErrors": []
+}

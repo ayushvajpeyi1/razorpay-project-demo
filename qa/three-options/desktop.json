@@ -1,0 +1,26 @@
+[
+  {
+    "screen": "1 Overview",
+    "bars": 0,
+    "bottom": 809.421875,
+    "obstructed": false,
+    "overflow": false,
+    "tables": 0
+  },
+  {
+    "screen": "4 Test",
+    "bars": 3,
+    "bottom": 825.9273223876953,
+    "obstructed": false,
+    "overflow": false,
+    "tables": 0
+  },
+  {
+    "screen": "5 Your plan",
+    "bars": 0,
+    "bottom": 829.3781280517578,
+    "obstructed": false,
+    "overflow": false,
+    "tables": 1
+  }
+]
